@@ -1,0 +1,100 @@
+label {
+	position: relative;
+	left: 100px;
+	top: 100px;
+}
+
+/* BY PUTTING DISPLAY NONE ON THE INPUT WE ERASE THE CHECKBOX BOX THAT IS DEFAULT IN AN INPUT TYPE CHECKBOX */
+.check {
+	display: none;
+}
+
+.btn {
+	display: inline-block;
+	height: 50px;
+	width: 120px;
+	background: #333;
+	border-radius: 50px;
+	transition: background .3s ease;
+}
+
+.btn::before {
+	content: "";
+	position: absolute;
+	height: 70px;
+	width: 70px;
+	top: -45px;
+	left: -5px;
+	border-radius: 40px;
+	background: #aaa;
+
+	/* HERE WE CAN USE ALL BECAUSE WE ARE ANIMATING EVERYTHING EXACTLY THE SAME */
+	transition: all .3s ease;
+}
+
+/* HERE WE ARE SAYING WHEN WE CHECK THE INPUT WE WANT YOU TO DO THIS WITH THE BTN, THAT IS DONE WITH THE PLUS, THE PLUS ESSENTIALLY SAYS I WANT YOU TO MOVE ONTO THE NEXT ELEMENT */
+.check:checked + .btn {
+	background: #eee;
+}
+
+.check:checked + .btn::before {
+	background: #0283fc;
+	left: 55px;
+}
+
+/* DIFFERENT CHECKBOX STYLE */
+
+.check-two {
+	display: none;
+}
+
+.btn-two {
+	display: inline-block;
+	height: 60px;
+	width: 120px;
+	background: #333;
+	border-radius: 50px;
+	transition: background .3s ease;
+}
+
+.btn-two::before {
+	content: "";
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	top: -41px;
+	left: 5px;
+	border-radius: 40px;
+	background: #aaa;
+	transition: all .3s ease;
+}
+
+.btn-two::after {
+	content: "off";
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	top: -41px;
+	left: 65px;
+	text-transform: uppercase;
+	color: white;
+	line-height: 50px;
+	text-align: center;
+	font-weight: 900;
+	transition: all .3s ease;
+}
+
+.check-two:checked + .btn-two {
+	background: #eee;
+}
+
+.check-two:checked + .btn-two::before {
+	background: #0283fc;
+	left: 65px;
+}
+
+.check-two:checked + .btn-two::after {
+	content: "on";
+	color: #0283fc;
+	left: 5px;
+}
