@@ -15,7 +15,7 @@ label {
 	width: 120px;
 	background: #333;
 	border-radius: 50px;
-	transition: background .3s ease;
+	transition: background .4s ease;
 }
 
 .btn::before {
@@ -29,7 +29,7 @@ label {
 	background: #aaa;
 
 	/* HERE WE CAN USE ALL BECAUSE WE ARE ANIMATING EVERYTHING EXACTLY THE SAME */
-	transition: all .3s ease;
+	transition: all .4s ease;
 }
 
 /* HERE WE ARE SAYING WHEN WE CHECK THE INPUT WE WANT YOU TO DO THIS WITH THE BTN, THAT IS DONE WITH THE PLUS, THE PLUS ESSENTIALLY SAYS I WANT YOU TO MOVE ONTO THE NEXT ELEMENT */
@@ -44,6 +44,11 @@ label {
 
 /* DIFFERENT CHECKBOX STYLE */
 
+.second-label {
+	margin-left: 50px;
+	margin-top: 1px;
+}
+
 .check-two {
 	display: none;
 }
@@ -54,7 +59,7 @@ label {
 	width: 120px;
 	background: #333;
 	border-radius: 50px;
-	transition: background .3s ease;
+	transition: background .4s ease;
 }
 
 .btn-two::before {
@@ -66,7 +71,7 @@ label {
 	left: 5px;
 	border-radius: 40px;
 	background: #aaa;
-	transition: all .3s ease;
+	transition: all .4s ease;
 }
 
 .btn-two::after {
@@ -81,7 +86,7 @@ label {
 	line-height: 50px;
 	text-align: center;
 	font-weight: 900;
-	transition: all .3s ease;
+	transition: all .4s ease;
 }
 
 .check-two:checked + .btn-two {
