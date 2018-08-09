@@ -1,13 +1,47 @@
+body {
+	background: #06125a;
+}
+
 .box {
 	display: inline-block;
 	height: 200px;
 	width: 200px;
-	background: #aaa;
-	transition: width 5s, height 5s, border-radius 5s;
+	background: #fdb528;
+	transition: width 3s, height 3s, border-radius 3s;
 }
 
 .box:hover {
 	width: 400px;
 	height: 400px;
+	border-radius: 100%;
+}
+
+.container {
+	display: inline-block;
+	height: 200px;
+	width: 200px;
+	border: 7px solid #aaa;
+	transition: border-radius 3s;
+}
+
+.box-two {
+	display: inline-block;	
+	background: #ff4c08;
+	height: 100%;
+	width: 100%;
+	/* WE USE TRANSFORM-ORIGIN TO SIGNIFY WHERE TO START THE TRANSFORMATION FROM */
+	transform-origin: bottom right;
+	transition: transform 1s, border-radius 3s;
+	/* THIS IS PUT ON THE CHILD ELEMENT TO BE ABLE TO DISABLE THE DEFAULT HOVER BEHAVIOR AND ONLY ALLOW HOVER TO WORK ON THE PARENT */
+	pointer-events: none;
+}
+
+.container:hover {
+	border-radius: 100%;
+}
+
+/* WE BUILT A CONTAINER TO FIX THE HOVER ISSUE OVER AN ELEMENT, SO WE WANT THE HOVER ON THE CONTAINER AND THE TRANSFORM ON THE BOX */
+.container:hover .box-two {
+	transform: rotate(720deg);
 	border-radius: 100%;
 }
