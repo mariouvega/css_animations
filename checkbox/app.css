@@ -1,7 +1,12 @@
+body {
+	background: #fdb528;
+}
+
 label {
 	position: relative;
 	left: 100px;
 	top: 100px;
+	cursor: pointer;
 }
 
 /* BY PUTTING DISPLAY NONE ON THE INPUT WE ERASE THE CHECKBOX BOX THAT IS DEFAULT IN AN INPUT TYPE CHECKBOX */
@@ -28,7 +33,7 @@ label {
 	border-radius: 40px;
 	background: #aaa;
 
-	/* HERE WE CAN USE ALL BECAUSE WE ARE ANIMATING EVERYTHING EXACTLY THE SAME */
+	/* HERE WE CAN USE ALL BECAUSE WE ARE ANIMATING EVERY PROPERTY EXACTLY THE SAME */
 	transition: all .4s ease;
 }
 
@@ -47,6 +52,7 @@ label {
 .second-label {
 	margin-left: 50px;
 	margin-top: 1px;
+	cursor: pointer;
 }
 
 .check-two {
